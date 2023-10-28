@@ -1,0 +1,25 @@
+{% extends 'digitalapp/base.html' %} 
+{% block body %}
+<div class="flex p-10">
+  <div>
+    <img
+      src="https://www.pacificfoodmachinery.com.au/media/catalog/product/placeholder/default/no-product-image-400x400.png"
+      alt=""
+    />
+  </div>
+  <div class="pl-10">
+    <div class="text-4xl mb-4">{{ product.name }}</div>
+    <div class="mb-4">{{ product.description }}</div>
+    <div class="mb-4 text-green-700 font-bold">${{ product.price }}</div>
+    <div>
+      <button
+        id="checkout-button"
+        class="bg-green-500 text-white px-4 py-2 rounded-sm">
+        Buy
+      </button>
+    {% comment %} </div>
+    <div id="myemail" hidden>{{ request.user.email }}</div>
+  </div> {% endcomment %}
+</div>
+
+{% endblock %}
